@@ -6,6 +6,7 @@ function Home() {
     return (
         <div>
             <h1>Convite Ousado</h1>
+            <h3>Butico hoje?</h3>
             <Contador />
         </div>
     );
@@ -58,13 +59,12 @@ function Contador() {
 
     return (
         <div className='flex justify-center'>
-
             <button
                 style={successButtonStyle}
                 onMouseOver={(e) => (e.target.style.backgroundColor = '#15803d')}
                 onMouseOut={(e) => (e.target.style.backgroundColor = '#16a34a')}
                 onClick={() => window.location.href = "https://www.youtube.com/watch?v=JMswHAJaCPw"}>
-                <Accessibility size={20} /> Sucesso
+                <Accessibility size={20} /> Sim!
             </button>
 
             <button
@@ -76,7 +76,7 @@ function Contador() {
                     e.target.style.backgroundColor = '#dc2626'; 
                 }}
             >
-                <Angry size={20} /> Negado
+                <Angry size={20} /> Nop, sem butico hoje
             </button>
         </div>
     );
