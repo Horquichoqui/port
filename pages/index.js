@@ -58,7 +58,6 @@ function Contador() {
 
     return (
         <div className='flex justify-center'>
-            <h1>Contador: {number}</h1>
 
             <button
                 style={successButtonStyle}
