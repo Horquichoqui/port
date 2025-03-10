@@ -3,33 +3,10 @@ import { Angry } from 'lucide-react';
 import { Accessibility } from 'lucide-react';
 
 function Home() {
-    const [scrollPosition, setScrollPosition] = useState(0);
-
-    const handleScroll = () => {
-        const position = window.pageYOffset;
-        setScrollPosition(position);
-    };
-
-    React.useEffect(() => {
-        window.addEventListener('scroll', handleScroll, { passive: true });
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
-    // Calcula a intensidade do roxo baseado na posição do scroll
-    const purpleIntensity = Math.min(100 + scrollPosition * 0.2, 255);
-    const backgroundColor = `linear-gradient(180deg, rgba(147, 112, 219, ${purpleIntensity / 255}), rgba(75, 0, 130, ${purpleIntensity / 255}))`;
-
     return (
-        <div style={{ 
-            background: backgroundColor,
-            minHeight: '100vh',
-            padding: '20px',
-            transition: 'background 0.3s ease'
-        }}>
-            {/* <h1>Convite Ousado</h1> */}
-            {/* <h3>Butico hoje?</h3> */}
+        <div>
+            <h1>Convite Ousado</h1>
+            <h3>Butico hoje?</h3>
             <Contador />
         </div>
     );
